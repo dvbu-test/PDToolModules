@@ -10,7 +10,7 @@
 	<property name="docs" location="docs"/>
 	<property name="resources" location="resources"/>
 	<property name="project-name" value="PDToolModules"/>
-	<property name="project-target1" value="../PDTool_6_2"/>
+	<property name="project-target1" value="../PDTool"/>
 
 	<path id="project.class.path">
 		<!--fileset dir="lib">
@@ -46,7 +46,7 @@
 		<!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
 		<jar jarfile="${dist}/${project-name}.jar" basedir="${build}" />
 
-		<!-- Copy the distribution jar to PDTool_6_2  -->
+		<!-- Copy the distribution jar to PDTool  -->
 		<copy todir="${project-target1}/lib">
 		    <fileset dir="${dist}">
 		        <include name="**"/>
@@ -54,7 +54,7 @@
 		</copy>
 
 		
-		<!-- Copy the XML Schema to PDTool_6_2 for schema validation pusposes -->
+		<!-- Copy the XML Schema to PDTool for schema validation pusposes -->
 		<copy todir="${project-target1}/resources/schema">
 		    <fileset dir="${schema}">
 		        <include name="PDToolModules.xsd"/>
